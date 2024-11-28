@@ -1,12 +1,19 @@
 // Questions and Answers
 
-const questions = [ {
+const questions = [ 
+    {
     question:   
-}
+    "What is the capital of Nigeria?", 
+    answer: {  },
+    options: ["Lagos", "Abuja", "Kano", "Ibadan"]
+    },
+    {]
 
 // Get DOM elements
 const questionDiv = document.querySelectorAll('.question');
 const answerDiv = document.querySelectorAll('.answer');
+
+// Display questions and answers
 
 // Add event listener to each answer
 
@@ -24,4 +31,4 @@ submitButton.addEventListener('click', () => {
         }
     });
     result.textContent = `Your score is ${score}`;
-}
+});
