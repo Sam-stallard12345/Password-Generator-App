@@ -2,18 +2,53 @@
 
 const questions = [ 
     {
-    question:   
-    "What is the capital of Nigeria?", 
-    answer: {  },
-    options: ["Lagos", "Abuja", "Kano", "Ibadan"]
+        question:   
+        "Which of the following is not a function of a password API?", 
+        answer: "Hacking into overseas military operations",
+        options: ["Hacking into overseas military operations", 
+            "allows end users in your team to update their passwords", 
+            "a tool to help users generate strong passwords", 
+            "Can include paramaters such as length, uppercase letters, lowercase letters, numbers, and special symbols"]
     },
-    {]
+    {
+        question:   
+        "What is the difference between a password API and a password manager?",
+        answer: "A password API is a tool that helps users generate strong passwords, while a password manager is a tool that helps users store and manage their passwords.",
+        options: ["A password API is a tool that helps users generate strong passwords, while a password manager is a tool that helps users store and manage their passwords.",
+            "A password API is a tool that helps users store and manage their passwords, while a password manager is a tool that helps users generate strong passwords.",
+            "A password API is a tool that helps users generate strong passwords, while a password manager is a tool that helps users store and manage their passwords.",
+            "A password API is a tool that helps users store and manage their passwords, while a password manager is a tool that helps users generate strong passwords."]
+    },
+    {
+        question: "Which of the following is not a disadvantage of using a password generator?",
+        answer: "Passwords Are Harder to guess",
+        options: ["Generated Passwords Can Be Difficult to Enter",
+            "Passwords Are Harder to Memorize. Strong and complicated passwords improve your security, but they can be difficult to commit to memory.",
+            "There Are Security Concerns. Password generators are only as secure as the systems that host them.",
+            "Passwords Are Harder to guess"
+        ]
+    },
+    {
+        question: "Which algorithm is used for random password generators?"
+        answer: "The main algorithm for password generation contains a FOR loop, whichgenerates a random number between 1 and 4 to choose the character set",
+        options: ["The main algorithm for password generation contains a FOR loop, whichgenerates a random number between 1 and 4 to choose the character set",
+            "Cryptography",
+            "MD5",
+            "SHA-256"
+        ]
+    }
+]
 
 // Get DOM elements
 const questionDiv = document.querySelectorAll('.question');
 const answerDiv = document.querySelectorAll('.answer');
 
-// Display questions and answers
+// Display questions and options in a responsive div
+questions.forEach((question, index) => {
+    let randomQ = Math.floor(Math.random() * questions.length);
+    questionDiv[index].textContent = questions.question;
+    answerDiv[index].textContent = questions.options;
+});
 
 // Add event listener to each answer
 
@@ -25,7 +60,7 @@ submitButton.addEventListener('click', () => {
     let score = 0;
     answers.forEach((answer, index) => {
         if (answer.checked) {
-            if (answer.value === 'correct') {
+            if (option.value === answer) {
                 score++;
             }
         }
