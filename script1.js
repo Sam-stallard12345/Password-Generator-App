@@ -40,8 +40,8 @@ const questions = [
 ]
 
 // Get DOM elements
-const questionDiv = document.querySelectorAll('.question');
-const answerDiv = document.querySelectorAll('.answer');
+const questionDiv = document.querySelector('.questions');
+const answerDiv = document.querySelector('.answers');
 
 
 document.addEventListener('DOMContentLoaded', () => {
