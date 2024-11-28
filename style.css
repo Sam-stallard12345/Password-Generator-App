@@ -19,6 +19,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
 }   
 
+.button {
+    background-color: white;
+    border: none;
+    color: blueviolet;
+    padding: 15px 32px;
+}
 /* Navbar Styles */
 #navbar {
     background-color: #333;
@@ -30,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #navbar h1 {
     padding: 1em;
+    text-align: center;
 }
 
 #navbar :hover {
@@ -55,14 +62,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .answers {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1em;
     margin: 2em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
         display: flex;
         flex-direction: row;
@@ -87,4 +93,58 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 2em;
     }
     
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5em;
+    }
+
+    .questions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5em;
+    }
+
+    .answers {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1em;
+        margin-top: 2em;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (min-width: 1400px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5em;
+    }
+
+    .questions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5em;
+    }
+
+    .answers {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 1em;
+        margin-top: 2em;
+        flex-wrap: wrap;
+    }
+
 }

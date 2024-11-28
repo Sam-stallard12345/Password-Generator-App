@@ -29,7 +29,7 @@ const questions = [
         ]
     },
     {
-        question: "Which algorithm is used for random password generators?"
+        question: "Which algorithm is used for random password generators?",
         answer: "The main algorithm for password generation contains a FOR loop, whichgenerates a random number between 1 and 4 to choose the character set",
         options: ["The main algorithm for password generation contains a FOR loop, whichgenerates a random number between 1 and 4 to choose the character set",
             "Cryptography",
@@ -42,14 +42,18 @@ const questions = [
 // Get DOM elements
 const questionDiv = document.querySelectorAll('.question');
 const answerDiv = document.querySelectorAll('.answer');
+const answers = document.querySelectorAll('.answer .button');
 
 // Display questions and options in a responsive div
-questions.forEach((question, index) => {
-    let randomQ = Math.floor(Math.random() * questions.length);
-    questionDiv[index].textContent = questions.question;
-    answerDiv[index].textContent = questions.options;
-});
+document.addEventListener('DOMContentLoaded', () => {
+    questions.forEach((question, index) => {
+        let randomQ = Math.floor(Math.random() * questions.length);
+        questionDiv.textContent = questions.question[randomQ];
+        answerDiv.textContent = questions.options[randomQ];
+    });
 
+    if ()
+});
 // Add event listener to each answer
 
 // Check Answer on button submit
