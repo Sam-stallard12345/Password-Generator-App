@@ -42,46 +42,51 @@ const questions = [
 // Get DOM elements
 const questionDiv = document.querySelectorAll('.question');
 const answerDiv = document.querySelectorAll('.answer');
-const answers = document.querySelectorAll('.answer .button');
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    runGame();    
+    loadNewQuestion();    
 });
 
-// Run game function
-function runGame() {
-    // Set current question
-    let currentQuestion = 0;    
+let currentQuestion = 0; 
 
-    // Display question
-    questionDiv.textContent = questions[currentQuestion].question;
-
-    // Display options
-    for (let answer of answers) {
-        answer.textContent = questions[currentQuestion].options[answers.indexOf(answer)];
-    }
-
-    // End quiz
-    if (currentQuestion === questions.length) {
-        endQuiz();
-    }
-}
+// Load new question
+function loadNewQuestion() {
+    if (currentQuestion < questions.length) {
+        questionDiv.textContent = questions[currentQuestion].question;
+        for (let answer of answerDiv) {
+            answer.textContent = questions[currentQuestion].options[answerDiv.indexOf(answer)];
+        }
+    } else { endQuiz(); }   
+}    
 
 // Add event listener to each answer
-answers.forEach((answer) => {
-    answer.addEventListener('click', () => {
-        if (this.value() === questions[currentQuestion].answer) {
+answerDiv.forEach((answer) => {
+    answer.addEventListener('click', (e) => {
+        if (e.target === questions[currentQuestion].answer) {
             answer.style.backgroundColor = 'green';
-            incrementScore();
+            isCorrect = true;
         } else {
             answer.style.backgroundColor = 'red';
-            incrementWrongScore();
+            isCorrect = false;
         }
-        // Increment current question
-        currentQuestion++;
+        
     });
 });
+
+// Check answer
+function checkAnswer() {
+    let checkSubmit = document.addEventListener('submit', () => {
+        if (isCorrect) {
+            incrementScore();
+        } else if (isCorrect === false) {
+            incrementWrongScore();
+        } else {
+            alert('Please select an answer');
+        }
+    }
+
+};
 
 // Set total questions
 let totalQuestions = document.querySelector('.total-questions');
@@ -107,8 +112,8 @@ function incrementWrongScore() {
 
 // click submit to generate a new question
 const submit = document.querySelector('.submit-button');
-submit.addEventListener('click', () => {
-    ;
+submit.addEventListener('submit', () => {
+    currentQuestion++;
 });
 
 // End Quiz 
@@ -117,15 +122,16 @@ function endQuiz () {
     let finalScore = document.querySelector('.final-score');
     let quizContainer = document.querySelector('#quiz');
 
-    if (currentQuestion > questions.length) {
+    if (!currentQuestion < questions.length) {
         quizContainer.classList.add('hidden');
-        endPage.classList.remove('hidden');
+        endPage.classList.toggle('hidden');
         finalScore.textContent = `Your final score is ${score} out of ${questions.length}`;
     }
 
     // Restart quiz
     const restart = document.querySelector('.restart');
     restart.addEventListener('submit', () => {
-        runGame();
+        quizContainer.classList.toggle('hidden');
+        endPage.classList.toggle('hidden');
     });
 }
