@@ -14,9 +14,7 @@
         <h1 class="text-center">Quiz</h1>
     </nav>
     <main id="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+                <div id="quiz" class="container">
                     <form action="quiz.php" method="post">
                         <div class="questions"></div>
                         <div class="answers">
@@ -25,12 +23,22 @@
                             <button class="button"></button>
                             <button class="button"></button>
                         </div>
-                        <button type="submit" class="submit-button">Submit</button>
-                        <div class="result"></div>
+                        <div id="click-next">
+                            <p>Click Submit for next</span> of <span class="total-questions"></span> Questions</p><br>
+                            <button type="submit" class="submit-button">Submit</button>
+                        </div>
+                    
+                        <div class="result"><span class="correct">Correct Answers:</span><span class="incorrect">Incorrect Answers:</span></div>
+
                     </form>
                 </div>
-            </div>
-        </div>            
+                <div id="end-page" class="container hidden">
+                    <div class="final-score"></div>
+                    <div class="next">
+                        <div class="restart"><button type="submit">Play Again</button></div>
+                        <a href="index.html" class="button play-again">Go home</a>
+                    </div>
+                </div>           
     </main>
     <footer id="footer">
         <p class="text-center">Play or Pass &copy; 2021</p>
