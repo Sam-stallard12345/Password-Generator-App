@@ -40,8 +40,8 @@ const questions = [
 ]
 
 // Get DOM elements
-const questionDiv = document.querySelector('.questions');
-const answerDiv = document.querySelector('.answers');
+const questionDiv = document.querySelector('.question');
+const answerDiv = document.querySelector('.answers button');
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -55,7 +55,8 @@ function loadNewQuestion() {
     if (currentQuestion < questions.length) {
         questionDiv.textContent = questions[currentQuestion].question;
         for (let answer of answerDiv) {
-            answer.textContent = questions[currentQuestion].options[answerDiv.indexOf(answer)];
+            let answerDivArr = Array.from(answerDiv);
+            answer.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answer)];
         }
     } else { endQuiz(); }   
 }    
@@ -84,7 +85,7 @@ function checkAnswer() {
         } else {
             alert('Please select an answer');
         }
-    }
+    });
 
 };
 
