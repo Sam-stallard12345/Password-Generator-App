@@ -27,12 +27,6 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-.button {
-    background-color: white;
-    border: none;
-    color: blueviolet;
-    padding: 15px 32px;
-}
 /* Navbar Styles */
 #navbar {
     background-color: #333;
@@ -51,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
     color: green;
 }
 
+/* Main Styles */
 #main {
     background-color: #333;
     margin: 50px;
@@ -68,8 +63,15 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
+.heading {
+    background-color: white;
+    text-align: center;
+    margin: 5em;
+}
+
 .lead {
     font-size: 3rem;
+    font-weight: bold;
 }
 
 .questions {
@@ -79,13 +81,22 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     margin: 5em;
+    
 }
 
-.answers {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-around;
-    align-items: center;
+.button {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    padding: 15px 32px;
+    font-weight: bold;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 5px;
 }
 
 .result {
@@ -94,6 +105,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
     gap: 15vw;
     align-items: center;
+    justify-content: center;
     margin: 5em;
 }
 
@@ -112,6 +124,17 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px 32px;
 }
 
+#footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.2em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
     
     .questions {
@@ -130,6 +153,14 @@ h1, h2, h3, h4, h5, h6 {
         text-wrap: wrap;
     }
     
+    .button {
+        height: 50px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -142,11 +173,20 @@ h1, h2, h3, h4, h5, h6 {
     .answers {
         display: grid;
         grid-template-columns: auto auto;
-        gap: 3rem;
+        justify-content: center;
+        gap: 5rem;
         margin: 3em;
-        flex-wrap: wrap;
+        width: 90%;
     }
 
+    .button {
+        height: 90px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -159,11 +199,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .answers {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 7rem;
-        margin: 5em;
-        flex-wrap: wrap;
+        gap: 7rem;   
     }
 
 }

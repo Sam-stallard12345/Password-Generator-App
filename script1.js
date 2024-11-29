@@ -41,8 +41,9 @@ const questions = [
 
 // Get DOM elements
 const questionDiv = document.querySelector('.question');
-const answerDiv = document.querySelector('.answers button');
+const answerDiv = document.querySelector('.answers').children;
 
+let answerDivArr = Array.from(answerDiv);
 
 document.addEventListener('DOMContentLoaded', () => {
     loadNewQuestion();    
@@ -54,30 +55,32 @@ let currentQuestion = 0;
 function loadNewQuestion() {
     if (currentQuestion < questions.length) {
         questionDiv.textContent = questions[currentQuestion].question;
-        for (let answer of answerDiv) {
-            let answerDivArr = Array.from(answerDiv);
-            answer.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answer)];
+        for (let answers of answerDiv) {
+            
+            answers.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answers)];
         }
     } else { endQuiz(); }   
 }    
 
 // Add event listener to each answer
-answerDiv.forEach((answer) => {
-    answer.addEventListener('click', (e) => {
-        if (e.target === questions[currentQuestion].answer) {
-            answer.style.backgroundColor = 'green';
+answerDivArr.forEach((answers) => {
+    answers.addEventListener('click', () => {
+        if (questions[currentQuestion].options === questions[currentQuestion].answer) {
+            answers.style.backgroundColor = 'green';
             isCorrect = true;
-        } else {
-            answer.style.backgroundColor = 'red';
+        } else if (questions[currentQuestion].options !== questions[currentQuestion].answer) {
+            answers.style.backgroundColor = 'red';
             isCorrect = false;
+        } else {
+            isCorrect = null;
         }
         
+        checkAnswer();
     });
 });
 
 // Check answer
 function checkAnswer() {
-    let checkSubmit = document.addEventListener('submit', () => {
         if (isCorrect) {
             incrementScore();
         } else if (isCorrect === false) {
@@ -85,8 +88,6 @@ function checkAnswer() {
         } else {
             alert('Please select an answer');
         }
-    });
-
 };
 
 // Set total questions
@@ -115,6 +116,7 @@ function incrementWrongScore() {
 const submit = document.querySelector('.submit-button');
 submit.addEventListener('submit', () => {
     currentQuestion++;
+    loadNewQuestion();
 });
 
 // End Quiz 
