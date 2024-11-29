@@ -60,7 +60,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
 
 .heading {
@@ -122,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 8px;
     color: blueviolet;
     padding: 15px 32px;
+    font-weight: bold;
 }
 
 #footer {
@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
     .questions {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
     }
 
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 85%;
     }
 }
 
@@ -168,24 +168,24 @@ h1, h2, h3, h4, h5, h6 {
     .questions {
         justify-content: center;
         align-items: center;
+        margin: 5rem;
     }
 
     .answers {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 40% 40%;
         justify-content: center;
         gap: 5rem;
         margin: 3em;
-        width: 90%;
     }
 
     .button {
         height: 90px;
-        display: flex;
         text-align: center;
+        display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 100%;
     }
 }
 
@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .answers {
-        gap: 7rem;   
+         gap: 7rem;
     }
 
 }

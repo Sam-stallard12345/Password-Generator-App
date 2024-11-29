@@ -64,7 +64,7 @@ function loadNewQuestion() {
 
 // Add event listener to each answer
 answerDivArr.forEach((answers) => {
-    answers.addEventListener('click', () => {
+    answers.addEventListener('click', (e) => {
         if (questions[currentQuestion].options === questions[currentQuestion].answer) {
             answers.style.backgroundColor = 'green';
             isCorrect = true;
