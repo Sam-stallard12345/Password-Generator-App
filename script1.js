@@ -66,7 +66,7 @@ function loadNewQuestion() {
 answerDivArr.forEach((answers) => {
     answers.addEventListener('click', (e) => {
         e.preventDefault();
-        if (questions[currentQuestion].options == questions[currentQuestion].answer) {
+        if (e.target === questions[currentQuestion].answer) {
             answers.style.backgroundColor = 'green';
             isCorrect = true;
         } else if (questions[currentQuestion].options !== questions[currentQuestion].answer) {

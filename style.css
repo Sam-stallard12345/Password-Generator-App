@@ -152,6 +152,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 5em;
 }
 
+.next {
+    display: flex;
+    gap: 5vw;
+    width: 50%;
+    margin: auto;
+}
 /* Start Page */
 #start-page {
     display: flex;
@@ -186,6 +192,14 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         width: 85%;
     }
+
+    .next {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -211,6 +225,13 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+
+    .next {
+        display: flex;
+        gap: 5vw;
+        width: 50%;
+        margin: 5vw 5vw 5vw 10vw;
     }
 }
 
