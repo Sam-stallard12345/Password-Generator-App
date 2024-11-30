@@ -37,7 +37,7 @@ const questions = [
             "SHA-256"
         ]
     }
-]
+];
 
 // Get DOM elements
 const questionDiv = document.querySelector('.question');
@@ -56,7 +56,6 @@ function loadNewQuestion() {
     if (currentQuestion < questions.length) {
         questionDiv.textContent = `${currentQuestion + 1}: ${questions[currentQuestion].question}`;
         for (let answers of answerDiv) {
-            
             answers.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answers)];
         }
     } else { endQuiz(); }   
@@ -69,6 +68,7 @@ answerDivArr.forEach((answers) => {
     answers.addEventListener('click', (e) => {
         e.preventDefault();
         const selectedAnswer = e.target.textContent;
+        
         if (selectedAnswer === questions[currentQuestion].answer) {
             answers.style.backgroundColor = 'green';
             isCorrect = true;
@@ -83,18 +83,26 @@ answerDivArr.forEach((answers) => {
     });
 });
 
+// Submit button
 const submit = document.querySelector('.submit-button');
 submit.addEventListener('click', () => {
     if (isCorrect) {
         incrementScore();
         currentQuestion++;
+        for (let answers of answerDiv) {
+            answers.style.backgroundColor = 'white';
+        }
         loadNewQuestion();
     } else if (isCorrect === false) {
         incrementWrongScore();
         currentQuestion++;
+        for (let answers of answerDiv) {
+            answers.style.backgroundColor = 'white';
+        }
         loadNewQuestion();
     } else {
         alert('Please select an answer');
+        return;
     }
 });
 
@@ -128,7 +136,7 @@ const finalScore = document.querySelector('.final-score')
 // End Quiz 
 function endQuiz() {
     goToEndPage();
-    finalScore.textContent = `You answered ${score} out of ${questions.length}`
+    finalScore.textContent = `You answered ${score} out of ${questions.length}`;
 }
 
 function goToEndPage() {
