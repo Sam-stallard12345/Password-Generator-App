@@ -54,7 +54,7 @@ let currentQuestion = 0;
 // Load new question
 function loadNewQuestion() {
     if (currentQuestion < questions.length) {
-        questionDiv.textContent = questions[currentQuestion].question;
+        questionDiv.textContent = `${currentQuestion + 1}: ${questions[currentQuestion].question}`;
         for (let answers of answerDiv) {
             
             answers.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answers)];
@@ -65,7 +65,8 @@ function loadNewQuestion() {
 // Add event listener to each answer
 answerDivArr.forEach((answers) => {
     answers.addEventListener('click', (e) => {
-        if (questions[currentQuestion].options === questions[currentQuestion].answer) {
+        e.preventDefault();
+        if (questions[currentQuestion].options == questions[currentQuestion].answer) {
             answers.style.backgroundColor = 'green';
             isCorrect = true;
         } else if (questions[currentQuestion].options !== questions[currentQuestion].answer) {
@@ -75,7 +76,7 @@ answerDivArr.forEach((answers) => {
             isCorrect = null;
         }
         
-        checkAnswer();
+        
     });
 });
 
@@ -113,28 +114,21 @@ function incrementWrongScore() {
 }
 
 // click submit to generate a new question
-const submit = document.querySelector('.submit-button');
+const submit = document.querySelectorAll('.submit-button');
 submit.addEventListener('submit', () => {
+    checkAnswer();
     currentQuestion++;
     loadNewQuestion();
 });
 
+const finalScore = document.querySelector('.final-score')
+
 // End Quiz 
-function endQuiz () {
-    let endPage = document.querySelector('#end-page');
-    let finalScore = document.querySelector('.final-score');
-    let quizContainer = document.querySelector('#quiz');
+function endQuiz() {
+    goToEndPage();
+    finalScore.textContent = `You answered ${score} out of ${questions.length}`
+}
 
-    if (!currentQuestion < questions.length) {
-        quizContainer.classList.add('hidden');
-        endPage.classList.toggle('hidden');
-        finalScore.textContent = `Your final score is ${score} out of ${questions.length}`;
-    }
-
-    // Restart quiz
-    const restart = document.querySelector('.restart');
-    restart.addEventListener('submit', () => {
-        quizContainer.classList.toggle('hidden');
-        endPage.classList.toggle('hidden');
-    });
+function goToEndPage() {
+    window.location.href = 'end.html'; 
 }
