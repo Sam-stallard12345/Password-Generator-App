@@ -1,5 +1,4 @@
 // Questions and Answers
-
 const questions = [ 
     {
         question:   
@@ -46,7 +45,9 @@ const answerDiv = document.querySelector('.answers').children;
 let answerDivArr = Array.from(answerDiv);
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadNewQuestion();    
+    if (currentQuestion === 0) {
+        loadNewQuestion();
+    }        
 });
 
 let currentQuestion = 0; 
@@ -102,7 +103,7 @@ submit.addEventListener('click', () => {
         loadNewQuestion();
     } else {
         alert('Please select an answer');
-        return;
+        return 
     }
 });
 
@@ -137,6 +138,7 @@ const finalScore = document.querySelector('.final-score')
 function endQuiz() {
     goToEndPage();
     finalScore.textContent = `You answered ${score} out of ${questions.length}`;
+    currentQuestion = 0;
 }
 
 function goToEndPage() {
