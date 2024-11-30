@@ -6,45 +6,46 @@
     <meta name="keywords" content="Quiz, Password, Generation">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play or Pass | Quiz Page</title>
-    
+    <!-- Font awesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Favicon -->
+    <link rel="icon" href="images.png" type="image/x-icon">     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav id="navbar">
-        <h1 class="text-center">Quiz</h1>
+        <h1 class="text-center"><a href="start-page.html" class="no-style">Quiz</a></h1>
     </nav>
     <main id="main">
-                <div id="quiz" class="container">
-                    <form action="quiz.php" method="post">
-                        <div class="questions">
-                            <p class="lead">Questions</p><br>
-                            <p class="question"></p>
-                        </div>
-                        <div class="answers">
-                            <button class="button"></button>
-                            <button class="button"></button>
-                            <button class="button"></button>
-                            <button class="button"></button>
-                        </div>
-                        <div id="click-next">
-                            <p>Click Submit for next</span> of <span class="total-questions"></span> Questions</p><br>
-                            <button type="submit" class="submit-button">Submit</button>
-                        </div>
-                    
-                        <div class="result"><span class="correct">Correct Answers:</span><span class="incorrect">Incorrect Answers:</span></div>
-
-                    </form>
+        <div id="quiz" class="container">
+            <form action="quiz.php" method="post">
+                <div class="heading">
+                    <p class="lead">Questions</p>
                 </div>
-                <div id="end-page" class="container hidden">
-                    <div class="final-score"></div>
-                    <div class="next">
-                        <div class="restart"><button type="submit">Play Again</button></div>
-                        <a href="index.html" class="button play-again">Go home</a>
-                    </div>
-                </div>           
+                <div class="questions">
+                    <p class="question"></p>
+                </div>
+                <div class="answers">
+                    <button class="button"></button>
+                    <button class="button"></button>
+                    <button class="button"></button>
+                    <button class="button"></button>
+                </div>
+                <div id="click-next">
+                    <p>Click Submit for next</span> of <span class="total-questions"></span> Questions</p><br>
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+                    
+                <div class="result"><span class="correct">Correct Answers:</span><span class="incorrect">Incorrect Answers:</span></div>
+
+            </form>
+        
+            
+        </div>           
     </main>
     <footer id="footer">
-        <p class="text-center">Play or Pass &copy; 2021</p>
+        <p class="text-center">Play or Pass &copy; 2024</p>
     </footer>
     <!-- Javascript-->
     <script src="script1.js"></script>

@@ -17,7 +17,7 @@ const questions = [
         options: ["A password API is a tool that helps users generate strong passwords, while a password manager is a tool that helps users store and manage their passwords.",
             "A password API is a tool that helps users store and manage their passwords, while a password manager is a tool that helps users generate strong passwords.",
             "A password API can be used to generate passwords for multiple users, while a password manager is used to generate passwords for a single user.",
-        ""]
+        "A password manager tells you to do your homework, whereas a Passwprd API generates memes for your facebook page"]
     },
     {
         question: "Which of the following is not a disadvantage of using a password generator?",
@@ -37,12 +37,13 @@ const questions = [
             "SHA-256"
         ]
     }
-]
+];
 
 // Get DOM elements
 const questionDiv = document.querySelector('.question');
-const answerDiv = document.querySelector('.answers button');
+const answerDiv = document.querySelector('.answers').children;
 
+let answerDivArr = Array.from(answerDiv);
 
 document.addEventListener('DOMContentLoaded', () => {
     loadNewQuestion();    
@@ -53,41 +54,59 @@ let currentQuestion = 0;
 // Load new question
 function loadNewQuestion() {
     if (currentQuestion < questions.length) {
-        questionDiv.textContent = questions[currentQuestion].question;
-        for (let answer of answerDiv) {
-            let answerDivArr = Array.from(answerDiv);
-            answer.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answer)];
+        questionDiv.textContent = `${currentQuestion + 1}: ${questions[currentQuestion].question}`;
+        for (let answers of answerDiv) {
+            answers.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answers)];
         }
     } else { endQuiz(); }   
 }    
 
+let isCorrect = null;
+
 // Add event listener to each answer
-answerDiv.forEach((answer) => {
-    answer.addEventListener('click', (e) => {
-        if (e.target === questions[currentQuestion].answer) {
-            answer.style.backgroundColor = 'green';
+answerDivArr.forEach((answers) => {
+    answers.addEventListener('click', (e) => {
+        e.preventDefault();
+        const selectedAnswer = e.target.textContent;
+        
+        if (selectedAnswer === questions[currentQuestion].answer) {
+            answers.style.backgroundColor = 'green';
             isCorrect = true;
-        } else {
-            answer.style.backgroundColor = 'red';
+        } else if (selectedAnswer !== questions[currentQuestion].answer) {
+            answers.style.backgroundColor = 'red';
             isCorrect = false;
+        } else {
+            isCorrect = null;
         }
+        
         
     });
 });
 
-// Check answer
-function checkAnswer() {
-    let checkSubmit = document.addEventListener('submit', () => {
-        if (isCorrect) {
-            incrementScore();
-        } else if (isCorrect === false) {
-            incrementWrongScore();
-        } else {
-            alert('Please select an answer');
+// Submit button
+const submit = document.querySelector('.submit-button');
+submit.addEventListener('click', () => {
+    if (isCorrect) {
+        incrementScore();
+        currentQuestion++;
+        for (let answers of answerDiv) {
+            answers.style.backgroundColor = 'white';
         }
-    });
+        loadNewQuestion();
+    } else if (isCorrect === false) {
+        incrementWrongScore();
+        currentQuestion++;
+        for (let answers of answerDiv) {
+            answers.style.backgroundColor = 'white';
+        }
+        loadNewQuestion();
+    } else {
+        alert('Please select an answer');
+        return;
+    }
+});
 
-};
+
 
 // Set total questions
 let totalQuestions = document.querySelector('.total-questions');
@@ -111,28 +130,15 @@ function incrementWrongScore() {
     wrongScoreDiv.textContent = `Incorrect Answers: ${wrongScore}`;
 }
 
-// click submit to generate a new question
-const submit = document.querySelector('.submit-button');
-submit.addEventListener('submit', () => {
-    currentQuestion++;
-});
+// Get final score
+const finalScore = document.querySelector('.final-score')
 
 // End Quiz 
-function endQuiz () {
-    let endPage = document.querySelector('#end-page');
-    let finalScore = document.querySelector('.final-score');
-    let quizContainer = document.querySelector('#quiz');
+function endQuiz() {
+    goToEndPage();
+    finalScore.textContent = `You answered ${score} out of ${questions.length}`;
+}
 
-    if (!currentQuestion < questions.length) {
-        quizContainer.classList.add('hidden');
-        endPage.classList.toggle('hidden');
-        finalScore.textContent = `Your final score is ${score} out of ${questions.length}`;
-    }
-
-    // Restart quiz
-    const restart = document.querySelector('.restart');
-    restart.addEventListener('submit', () => {
-        quizContainer.classList.toggle('hidden');
-        endPage.classList.toggle('hidden');
-    });
+function goToEndPage() {
+    window.location.href = 'end.html'; 
 }
