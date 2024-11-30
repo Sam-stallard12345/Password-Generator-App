@@ -1,16 +1,16 @@
 function generate() {
     let dictionary = "";
 
-    if (document.getElementById("").checked) {
+    if (document.getElementById("lowercaseCb").checked) {
         dictionary += "qwertyuiopasdfghjklzxcvbnm";
     }
-    if (document.getElementById("").checked) {
+    if (document.getElementById("uppercaseCb").checked) {
         dictionary += "QWERTYUIOPASDFGHJKLZXCVBNM";
     }
-    if (document.getElementById("").checked) {
+    if (document.getElementById("digitsCb").checked) {
         dictionary += "0123456789";
     }
-    if (document.getElementById("").checked) {
+    if (document.getElementById("symbolsCb").checked) {
         dictionary += "!@£$%^&*(){}[];:<>";
     }
 
@@ -35,4 +35,13 @@ function generate() {
         const index = Math.floor(Math.random() * dictionary.length)
         password += dictionary[index];
     }
+
+    document.querySelector('input[type="text"]').value = password;
 }
+
+
+[
+    ..document.querySelectorAll (
+        
+    )
+]
