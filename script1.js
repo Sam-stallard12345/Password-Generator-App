@@ -17,7 +17,7 @@ const questions = [
         options: ["A password API is a tool that helps users generate strong passwords, while a password manager is a tool that helps users store and manage their passwords.",
             "A password API is a tool that helps users store and manage their passwords, while a password manager is a tool that helps users generate strong passwords.",
             "A password API can be used to generate passwords for multiple users, while a password manager is used to generate passwords for a single user.",
-        ""]
+        "A password manager tells you to do your homework, whereas a Passwprd API generates memes for your facebook page"]
     },
     {
         question: "Which of the following is not a disadvantage of using a password generator?",
@@ -62,14 +62,17 @@ function loadNewQuestion() {
     } else { endQuiz(); }   
 }    
 
+let isCorrect = null;
+
 // Add event listener to each answer
 answerDivArr.forEach((answers) => {
     answers.addEventListener('click', (e) => {
         e.preventDefault();
-        if (e.target === questions[currentQuestion].answer) {
+        const selectedAnswer = e.target.textContent;
+        if (selectedAnswer === questions[currentQuestion].answer) {
             answers.style.backgroundColor = 'green';
             isCorrect = true;
-        } else if (questions[currentQuestion].options !== questions[currentQuestion].answer) {
+        } else if (selectedAnswer !== questions[currentQuestion].answer) {
             answers.style.backgroundColor = 'red';
             isCorrect = false;
         } else {
@@ -80,16 +83,22 @@ answerDivArr.forEach((answers) => {
     });
 });
 
-// Check answer
-function checkAnswer() {
-        if (isCorrect) {
-            incrementScore();
-        } else if (isCorrect === false) {
-            incrementWrongScore();
-        } else {
-            alert('Please select an answer');
-        }
-};
+const submit = document.querySelector('.submit-button');
+submit.addEventListener('click', () => {
+    if (isCorrect) {
+        incrementScore();
+        currentQuestion++;
+        loadNewQuestion();
+    } else if (isCorrect === false) {
+        incrementWrongScore();
+        currentQuestion++;
+        loadNewQuestion();
+    } else {
+        alert('Please select an answer');
+    }
+});
+
+
 
 // Set total questions
 let totalQuestions = document.querySelector('.total-questions');
@@ -113,14 +122,7 @@ function incrementWrongScore() {
     wrongScoreDiv.textContent = `Incorrect Answers: ${wrongScore}`;
 }
 
-// click submit to generate a new question
-const submit = document.querySelectorAll('.submit-button');
-submit.addEventListener('submit', () => {
-    checkAnswer();
-    currentQuestion++;
-    loadNewQuestion();
-});
-
+// Get final score
 const finalScore = document.querySelector('.final-score')
 
 // End Quiz 
