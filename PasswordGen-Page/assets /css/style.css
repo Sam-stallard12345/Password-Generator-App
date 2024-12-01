@@ -1,25 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Silkscreen:wght@400;700&display=swap');
-
-
-h1 {
-    font-family: 'Silkscreen', monospace;
-    font-size: medium;
+html {
+  background-color:   #333;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }
 
-body {
-    font-family: sans-serif;
-    background-color: grey;
-    color: white;
+h1 {
+    font-family: 'Silkscreen', sans-serif;  
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    padding: 100px;
+
 }
 
 .generator {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 10%;
-}
-
-.generator.h1 {
-    margin-bottom: 20%;
+    align-items: center;
+    margin-top: 50px;
+    padding: 100px;
+    background-color: #4527ec;
 }
