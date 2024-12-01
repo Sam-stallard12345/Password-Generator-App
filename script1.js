@@ -45,7 +45,7 @@ const answerDiv = document.querySelector('.answers').children;
 let answerDivArr = Array.from(answerDiv);
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadNewQuestion()        
+    loadNewQuestion();        
 });
 
 let currentQuestion = 0; 
@@ -101,10 +101,11 @@ submit.addEventListener('click', () => {
         loadNewQuestion();
     } else {
         alert('Please select an answer');
-    }
+        
+    } 
+    
+
 });
-
-
 
 // Set total questions
 let totalQuestions = document.querySelector('.total-questions');
