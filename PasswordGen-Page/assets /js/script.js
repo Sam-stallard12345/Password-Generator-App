@@ -58,3 +58,11 @@ document.querySelector("div.password button").addEventListener("click", () => {
 // Generate password on page load
 generate();
 
+
+
+
+
+
+
+
+
