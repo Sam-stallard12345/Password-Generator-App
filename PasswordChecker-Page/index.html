@@ -23,12 +23,29 @@
             .char-range {
                 margin-bottom: 20px;
             }
+
+            
         </style>
     </head>
 <body>
 
     <!--Header-->
-
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/img/logo.png" alt="Logo">
+                <span>Password Generator</span>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 
 
@@ -38,18 +55,18 @@
 
     <!--Password Checker Div (includes the following [input field for password, check boxes for rules applied])-->
 
-    <div class = "checker">
-        <h1>Password Checker</h1>
-
-        <div>
-            <label for="password">Password</label>
-            <input type="text" id="password" placeholder="Enter Password" />
-        </div>
-        <div>
-            <label for="powerbar">Password Strength</label>
-            <div class="power-div">
-                <div id="powerbar"></div>
-            </div>
+    <div class="group">
+      
+        <h1>Password Strength Checker</h1>
+        <label for="">Password</label>
+        <input type="text" 
+               id="password"
+               placeholder="Type your password here" />
+        <label for="">
+              Strength of password
+          </label>
+        <div class="power-container">
+            <div id="power-point"></div>
         </div>
     </div>
 
