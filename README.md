@@ -49,6 +49,8 @@ Validation
 <h3 id="tech">Technology Used </h3>
 Copilot for Code generation particularly  in creating JS functions.
 <h3 id="valid">Code Validation</h3>
+<img src="PasswordGen-Page/assets /images/htmlcheck.png">
+<img src="PasswordGen-Page/assets /images/csscheck.png">
 <img src="PasswordGen-Page/assets /images/JS Validation.png">
 <h3 id="resource">Resource Credit</h3>
 
