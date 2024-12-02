@@ -27,8 +27,12 @@ Password Generator app with a brief quiz, a Password Strength Test and a passwor
 <h3 id="features">Features</h3>
 
 <ol>
-    <li><h4 id="passgen">Password Generation</h4></li>
-    <li><h4 id="passcheck">Password Quality Checker</h4></li>
+    <li><h4 id="homepage">Home Page</h4>
+    <img src="PasswordGen-Page/assets /images/homepage.png"></li>
+    <li><h4 id="passgen">Password Generation</h4>
+    <img src="PasswordGen-Page/assets /images/Passwordgenerator.png" width="300px" height="300px"></li>
+    <li><h4 id="passcheck">Password Quality Checker</h4>
+    <img src="PasswordGen-Page/assets /images/passwordstrength.png" width="300px" height="300px"></li>
     <li><h4 id="quizPage">Quiz Page</h4><br>
     <img src="PasswordGen-Page/assets /images/quiz.png" width="300px" height="300px">
     </li>

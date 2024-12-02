@@ -281,6 +281,11 @@ h1, h2, h3, h4, h5, h6 {
         width: 50%;
         margin: 5vw 5vw 5vw 10vw;
     }
+
+    .submit-button {
+        display: flex;
+        max-width: 110px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
