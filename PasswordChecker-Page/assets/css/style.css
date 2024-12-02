@@ -10,12 +10,10 @@ h1 {
 
 body {
     margin: 0;
-    font-family: monospace;
+    font-family: 'Funnel Sans', sans-serif
     min-height: 100vh;
     display:block ;      
     justify-content: center;
-    background-image: linear-gradient(to top right,
-            #333, #14191f);
     color: white;
     font-size: 20px;
 }
@@ -27,6 +25,7 @@ body {
 .group {
     width: auto;
     text-align: center;
+    padding: 100px
 }
 
 .group label {
