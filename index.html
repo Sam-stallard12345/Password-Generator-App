@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>PlayOrPass | Homepage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Silkscreen:wght@400;700&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+
+        h1 {
+            font-family: 'Silkscreen', sans-serif;
+            color: white;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 60px;
+            background-color: #333;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar .logo span {
+            color: #f2f2f2;
+            font-size: 24px;
+        }
+
+        .navbar a {
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            z-index: 1000; /* Ensure dropdown is above other elements */
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1001; /* Ensure dropdown content is above other elements */
+            right: 0;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .buttons {
+            margin-top: 50px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 20px 40px;
+            margin: 20px;
+            font-size: 20px;
+            color: white;
+            background-color: #7e7575;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .buttons a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+
+
+    <div class="navbar">
+        <div class="logo">
+            <h1>PlayOrPass</h1>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Home</a>
+                <a href="../Password-Generator-App/PasswordGen-Page/index.html">Password Generator</a>
+                <a href="../Password-Generator-App/PasswordChecker-Page/index.html">Password Checker</a>
+                <a href="../Password-Generator-App/quiz.html">Password Quiz</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <section class="hero" style="background-color: #444; color: white; padding: 50px 20px;">
+        <div class="container">
+            <h2>Welcome to PlayOrPass</h2>
+            <p>Discover a suite of tools to help you generate, check, and test your passwords. Our goal is to provide you with the best resources to ensure your online security. Explore our apps and enhance your password management skills.</p>
+        </div>
+    </section>
+
+
+    <!--Cards for Links -->
+    <div style="height: 50px;"></div>
+    <div class="container" style="width: 75%;">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./images/password-gen.png" class="card-img-top" alt="Password Generator">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <a href="../Password-Generator-App/PasswordGen-Page/index.html" class="btn btn-dark">Password Generator</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./images/password-check.png" class="card-img-top" alt="Password Checker">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <a href="../Password-Generator-App/PasswordChecker-Page/index.html" class="btn btn-dark">Password Checker</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./images/password-quiz.jpg" class="card-img-top" alt="Password Quiz">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <a href="../Password-Generator-App/quiz.html" class="btn btn-dark">Password Quiz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <br>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- links for Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7362e65c29.js" crossorigin="anonymous"></script>
+</body>
+
+<footer
+style="background-color: #333; color: white; padding: 20px; text-align: center; position: fixed; width: 100%; bottom: 0;">
+
+<a href="https://www.facebook.com" target="_blank" style="color: white; margin: 0 10px;">
+    <i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://www.twitter.com" target="_blank" style="color: white; margin: 0 10px;">
+    <i class="fab fa-twitter"></i>
+</a>
+<a href="https://www.instagram.com" target="_blank" style="color: white; margin: 0 10px;">
+    <i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.linkedin.com" target="_blank" style="color: white; margin: 0 10px;">
+    <i class="fab fa-linkedin-in"></i>
+</a>
+</footer>
+
+
+
+</html>

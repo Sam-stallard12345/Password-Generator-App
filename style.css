@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
 }   
 
+<<<<<<< HEAD
 .text-center {
     text-align: center;
 }
@@ -31,6 +32,8 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
+=======
+>>>>>>> rayyan
 /* Navbar Styles */
 #navbar {
     background-color: #333;
@@ -40,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 10vh;
 }
 
+<<<<<<< HEAD
 #navbar h1 a {
     padding: 1em;
     text-align: center;
@@ -51,6 +55,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Main Styles */
+=======
+#navbar h1 {
+    padding: 1em;
+}
+
+#navbar :hover {
+    color: green;
+}
+
+>>>>>>> rayyan
 #main {
     background-color: #333;
     margin: 50px;
@@ -60,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 
 }
+<<<<<<< HEAD
 .container {
     display: flex;
     flex-direction: row;
@@ -81,11 +96,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .questions {
     background-color: white;
+=======
+
+.questions {
+>>>>>>> rayyan
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 5em;
+<<<<<<< HEAD
     
 }
 
@@ -117,10 +137,16 @@ h1, h2, h3, h4, h5, h6 {
 
 #click-next {
     color: white;
+=======
+}
+
+.answers {
+>>>>>>> rayyan
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
 }
 
 .submit-button {
@@ -242,15 +268,43 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 1400px) {
 
+=======
+    margin: 2em;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5em;
+    }
+
+>>>>>>> rayyan
     .questions {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+<<<<<<< HEAD
     }
 
     .answers {
          gap: 7rem;
     }
 
+=======
+        margin-top: 5em;
+    }
+
+    .answers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+    }
+    
+>>>>>>> rayyan
 }

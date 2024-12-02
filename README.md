@@ -2,6 +2,7 @@
 <h1> Play or Pass </h1>
 Password Generator app with a brief quiz
 
+<<<<<<< HEAD
 <h2> Contents </h2>
 <ol>
     <li><a href="#user">User Stories</a></li>
@@ -24,3 +25,5 @@ Password Generator app with a brief quiz
     <h4 id="QnA"></h4>
 
     <h4 id="endPage"></h4>
+=======
+>>>>>>> rayyan

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets /css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Password Generator</title>
+    <style>
+        /* Add some basic styling for better visualization */
+        .generator {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .password {
+            margin-bottom: 20px;
+        }
+        .char-range {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    
+
+
+<!--___________________________________________________________PASSWORD GENERATOR_________________________________________________________________-->
+
+
+
+
+
+
+    <!--Password Generator Div (includes the following [Slider for no of charac, input field producing pass, check boxes for rules applied])-->
+
+
+    <div class="generator">
+
+        <h1>Password Generator</h1>
+        <!-- password producer-->
+
+
+        <div class="password">
+            <input type="text" value="password" />
+            <button>copy</button>
+        </div>
+
+
+        <!--range char slider div -->
+
+
+        <div class="char-range">
+            <input type="range" min="4" max="24" value="8" />
+            <span>8</span>
+        </div>
+
+
+        <!--Checkboxes for rules applied-->
+
+
+        <div class="checkboxes">
+            <label><input type="checkbox" id="lowercaseCb"> Lowercase</label>
+            <label><input type="checkbox" id="uppercaseCb"> Uppercase</label>
+            <label><input type="checkbox" id="digitsCb"> Digits</label>
+            <label><input type="checkbox" id="symbolsCb"> Symbols</label>
+        </div>
+            <!--Generate Button-->
+
+            <button class="generate">Generate</button>
+
+    </div>
+
+        <!--___________________________________________________END OF PASSWORD GENERATOR__________________________________________________________-->
+        
+
+        <!---Links For JavaScript-->
+        <script src="assets /js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7362e65c29.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
