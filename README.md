@@ -19,17 +19,21 @@ Validation
     <li><a href="tech">Technology Used</a></li>
     <li><a href="valid">Validation</a></li>
     <li><a href="resource">Resource Credit</a></li>
+</ol>
 
 <h3 id="user">User Stories and project board</h3>
 
+<h3 id="UX"> UX Design</h3>
+<h4>Wireframes</h4>
+
 <h3 id="features">Features</h3>
+<ol>
+    <li><h4 id="quizPage">Quiz Page</h4></li>
 
-    <h4 id="quizPage></h4>
+    <li><h4 id="QnA"></h4></li>
 
-    <h4 id="QnA"></h4>
-
-    <h4 id="endPage"></h4>
-
+    <li><h4 id="endPage"></h4></li>
+</ol>
 <h3 id="tech">Technology Used </h3>
 
 <h3 id="valid">Code Validation</h3>
