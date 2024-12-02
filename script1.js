@@ -94,7 +94,6 @@ form.addEventListener('submit', handleFormSubmission);
 function handleFormSubmission(event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
-    // Check if an answer is selected
     const selectedAnswer = document.querySelector('.submit-button');
     
     if (selectedAnswer) {
