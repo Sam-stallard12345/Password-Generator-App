@@ -12,10 +12,6 @@ Validation
 <ol>
     <li><a href="#user">User Stories</a></li>
     <li><a href="#UX">UX Design</a></li>
-
-<h2> Contents </h2>
-<ol>
-    <li><a href="#user">User Stories</a></li>
     <li><a href="#features">Features</a></li>
     <ul>
         <li><a href="#passgen">Password Generator Page</a></li>
@@ -37,12 +33,12 @@ Validation
 <h3 id="features">Features</h3>
 
 <ol>
-    <li><h4 id="passgen"></h4></li>
-    <li><h4 id="passcheck"></h4></li>
+    <li><h4 id="passgen">Password Generation</h4></li>
+    <li><h4 id="passcheck">Password Quality Checker</h4></li>
     <li><h4 id="quizPage">Quiz Page</h4><br>
     <img src="PasswordGen-Page/assets /images/quiz.png" width="100px" height="100px">
     </li>
-    <li><h4 id="QnA"></h4><br>
+    <li><h4 id="QnA">JS functionality</h4><br>
     Included 5 areas of functionality on the quiz page including: a dynamic question input, a dynamic and responsive answer input, a dom selector to retrieve the number of questions and a scoring system which inrements right and wrong answers.</li>
 </ol>
 
