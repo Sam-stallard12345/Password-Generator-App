@@ -46,7 +46,10 @@ const answerDiv = document.querySelector('.answers').children;
 let answerDivArr = Array.from(answerDiv);
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadNewQuestion();    
+    if(currentQuestion === 0) {
+        loadNewQuestion();
+    }
+    
 });
 
 let currentQuestion = 0; 
@@ -58,7 +61,7 @@ function loadNewQuestion() {
         for (let answers of answerDiv) {
             answers.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answers)];
         }
-    } else { endQuiz(); }   
+    }    
 }    
 
 let isCorrect = null;
@@ -83,37 +86,40 @@ answerDivArr.forEach((answers) => {
     });
 });
 
-// Submit button
-const submit = document.querySelector('.submit-button');
-submit.addEventListener('click', () => {
-    if (isCorrect) {
-        incrementScore();
-        currentQuestion++;
-        for (let answers of answerDiv) {
-            answers.style.backgroundColor = 'white';
+// Attach the handleFormSubmission function to the form submit event
+const form = document.querySelector('#form');
+form.addEventListener('submit', handleFormSubmission);
+
+function handleFormSubmission(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Check if an answer is selected
+    const selectedAnswer = document.querySelector('.submit-button');
+    if (selectedAnswer) {
+        // Check if the selected answer is correct
+        if (isCorrect) {
+            incrementScore();
+        } else {
+            incrementWrongScore();
         }
-        loadNewQuestion();
-    } else if (isCorrect === false) {
-        incrementWrongScore();
+
+        // Move to the next question
         currentQuestion++;
-        for (let answers of answerDiv) {
-            answers.style.backgroundColor = 'white';
+        if (currentQuestion < questions.length) {
+            loadNewQuestion();
+            for (let answers of answerDiv) {
+                answers.style.backgroundColor = 'white';
+            }
+        } else {
+            endQuiz();
         }
-        loadNewQuestion();
+
+        
     } else {
         alert('Please select an answer');
-        return;
     }
-});
+}
 
-//restart button
-const restart = document.querySelector('.play-again');
-restart.addEventListener('click', () => {
-    window.location.replace('quiz.html');
-    currentQuestion = 0;
-    score = 0;
-    wrongScore = 0;
-});
 
 // Set total questions
 let totalQuestions = document.querySelector('.total-questions');
@@ -137,15 +143,12 @@ function incrementWrongScore() {
     wrongScoreDiv.textContent = `Incorrect Answers: ${wrongScore}`;
 }
 
-// Get final score
-const finalScore = document.querySelector('.final-score')
-
 // End Quiz 
 function endQuiz() {
-    goToEndPage();
-    finalScore.textContent = `You answered ${score} out of ${questions.length}`;
+        goToEndPage();
 }
 
 function goToEndPage() {
     window.location.href = 'end.html'; 
 }
+

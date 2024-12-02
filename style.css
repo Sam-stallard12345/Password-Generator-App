@@ -159,6 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .next {
     display: flex;
+    justify-content: center;
     gap: 5vw;
     width: 50%;
     margin: auto;
