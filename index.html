@@ -177,23 +177,30 @@
 
     <!-- Navbar -->
 
-
-    <div class="navbar">
-        <div class="logo">
-            <h1>PlayOrPass</h1>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">
-                <i class="fa fa-caret-down"></i>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+           <h1> <a class="navbar-brand" href="#">PlayOrPass</a></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="dropdown-content">
-                <a href="#">Home</a>
-                <a href="PasswordGen-Page/passwordgen.html">Password Generator</a>
-                <a href="PasswordChecker-Page/passwordcheck.html">Password Checker</a>
-                <a href="quiz.html">Password Quiz</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PasswordGen-Page/passwordgen.html">Password Generator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PasswordChecker-Page/passwordcheck.html">Password Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">Password Quiz</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
     <!-- Hero Section -->
 
@@ -287,9 +294,8 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/7362e65c29.js" crossorigin="anonymous"></script>
-        <footer
-            style="background-color: #333; color: white; padding: 0px; text-align: center; position: fixed; width: 100%; bottom: 0;">
-            <footer class="footer">
+        <footer class="footer" style="background-color: #333; color: white; padding: 0px; text-align: center; position: fixed; width: 100%; bottom: 0; height: 60px;">
+             
                 <i class="fab fa-facebook-f"></i>
                 </a>
                 <a href="https://www.twitter.com" target="_blank" style="color: white; margin: 0 10px;">
