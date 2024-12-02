@@ -26,7 +26,7 @@ Validation
 </ol>
 
 <h3 id="user">User Stories and project board</h3>
-
+<img src="PasswordGen-Page/assets /images/ProjectBoard.png">
 <h3 id="UX"> UX Design</h3>
 <h4>Wireframes</h4>
 <img src="PasswordGen-Page/assets /images/wireframes.png" width="100px" height="100px">
