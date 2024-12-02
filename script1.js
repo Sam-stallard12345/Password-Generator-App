@@ -106,7 +106,14 @@ submit.addEventListener('click', () => {
     }
 });
 
-
+//restart button
+const restart = document.querySelector('.play-again');
+restart.addEventListener('click', () => {
+    window.location.replace('quiz.html');
+    currentQuestion = 0;
+    score = 0;
+    wrongScore = 0;
+});
 
 // Set total questions
 let totalQuestions = document.querySelector('.total-questions');
