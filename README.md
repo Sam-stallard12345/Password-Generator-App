@@ -1,6 +1,6 @@
 # Password-Generator-App
 <h1> Play or Pass </h1>
-Password Generator app with a brief quiz
+Password Generator app with a brief quiz, a Password Strength Test and a password Generator
 
 <h2> Contents </h2>
 <ol>
