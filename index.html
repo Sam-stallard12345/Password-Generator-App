@@ -31,6 +31,7 @@
             padding: 0 20px;
             height: 60px;
             background-color: #333;
+            position: relative
         }
 
         .navbar .logo {
@@ -205,8 +206,49 @@
         </div>
     </section>
 
+    <style>
+        .card {
+            margin-bottom: 30px;
+        }
 
+        .card .btn {
+            background-color: #7e7575;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .card .btn:hover {
+            background-color: #555;
+        }
+    
+        .card {
+            margin-bottom: 30px;
+        }
+    
     <!--Cards for Links -->
+   
+        .card {
+            height: 100%;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
     <div style="height: 50px;"></div>
     <div class="container" style="width: 75%;">
         <div class="row">
@@ -214,26 +256,31 @@
                 <div class="card">
                     <img src="./images/password-gen.png" class="card-img-top" alt="Password Generator">
                     <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <a href="PasswordGen-Page/passwordgen.html" class="btn btn-dark">Password Generator</a>
+                        <h5 class="card-title">Password Generator</h5>
+                        <a href="PasswordGen-Page/passwordgen.html" class="btn btn-dark" style="width: auto; padding: 10px 20px;">Password Generator</a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="./images/password-check.png" class="card-img-top" alt="Password Checker">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <a href="PasswordChecker-Page/passwordcheck.html" class="btn btn-dark">Password Checker</a>
-                        </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./images/password-check.png" class="card-img-top" alt="Password Checker">
+                    <div class="card-body">
+                        <h5 class="card-title">Password Checker</h5>
+                        <a href="PasswordChecker-Page/passwordcheck.html" class="btn btn-dark" style="width: auto; padding: 10px 20px;">Password Checker</a>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="./images/password-quiz.jpg" class="card-img-top" alt="Password Quiz">
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./images/password-quiz.jpg" class="card-img-top" alt="Password Quiz">
+                    <div class="card-body">
+                        <h5 class="card-title">Password Quiz</h5>
+                        <a href="quiz.html" class="btn btn-dark" style="width: auto; padding: 10px 20px;">Password Quiz</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- links for Javascript-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -241,7 +288,7 @@
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/7362e65c29.js" crossorigin="anonymous"></script>
         <footer
-            style="background-color: #333; color: white; padding: 20px; text-align: center; position: fixed; width: 100%; bottom: 0;">
+            style="background-color: #333; color: white; padding: 0px; text-align: center; position: fixed; width: 100%; bottom: 0;">
             <footer class="footer">
                 <i class="fab fa-facebook-f"></i>
                 </a>
@@ -254,7 +301,7 @@
                 <a href="https://www.linkedin.com" target="_blank" style="color: white; margin: 0 10px;">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-            </footer>
+        </footer>
 
 </body>
 
