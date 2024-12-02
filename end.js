@@ -9,4 +9,5 @@ restart.addEventListener('click', () => {
 
 // Get final score
 const finalScore = document.querySelector('.final-score')
-finalScore.textContent = `You answered ${score} out of ${questions.length}`;
+const score = localStorage.getItem('score');
+finalScore.textContent = `You answered ${score} out of 4`;

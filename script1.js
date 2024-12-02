@@ -146,6 +146,7 @@ function incrementWrongScore() {
 // End Quiz 
 function endQuiz() {
         goToEndPage();
+        localStorage.setItem('score', score);
 }
 
 function goToEndPage() {
