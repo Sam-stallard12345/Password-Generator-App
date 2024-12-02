@@ -10,7 +10,7 @@ h1 {
 
 body {
     margin: 0;
-    font-family: 'Funnel Sans', sans-serif
+    font-family: 'Funnel Sans', sans-serif;
     min-height: 100vh;
     display:block ;      
     justify-content: center;
@@ -25,7 +25,7 @@ body {
 .group {
     width: auto;
     text-align: center;
-    padding: 100px
+    padding: 100px;
 }
 
 .group label {
