@@ -96,16 +96,23 @@ function handleFormSubmission(event) {
 
     // Check if an answer is selected
     const selectedAnswer = document.querySelector('.submit-button');
+    
     if (selectedAnswer) {
         // Check if the selected answer is correct
         if (isCorrect) {
             incrementScore();
-        } else {
+        } else if (isCorrect === false) {
             incrementWrongScore();
+        } else { 
+            alert('Please select an answer');
         }
 
         // Move to the next question
-        currentQuestion++;
+        do {
+            currentQuestion++;
+        }
+        while (!isCorrect === null);
+            
         if (currentQuestion < questions.length) {
             loadNewQuestion();
             for (let answers of answerDiv) {

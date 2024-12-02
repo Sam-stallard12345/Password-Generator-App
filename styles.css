@@ -131,6 +131,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #click-next {
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .answers {
@@ -180,10 +184,13 @@ h1, h2, h3, h4, h5, h6 {
 .next {
     display: flex;
     justify-content: center;
-    gap: 5vw;
+    align-self: center;
+    align-items: center;
     width: 100%;
     margin: auto;
 }
+
+
 /* Start Page */
 #start-page {
     display: flex;
@@ -191,6 +198,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
 }
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
     
@@ -270,7 +278,6 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-<<<<<<< HEAD
     }
 
     .answers {
@@ -278,7 +285,4 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 5em;
     }
 
-    
-    
->>>>>>> rayyan
 }

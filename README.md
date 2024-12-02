@@ -36,13 +36,14 @@ Validation
 <h4>Wireframes</h4>
 
 <h3 id="features">Features</h3>
+
 <ol>
-    <li><h4 id="quizPage">Quiz Page</h4></li>
-
+    <li><h4 id="quizPage">Quiz Page</h4>
+    </li>
     <li><h4 id="QnA"></h4></li>
-
     <li><h4 id="endPage"></h4></li>
 </ol>
+
 <h3 id="tech">Technology Used </h3>
 
 <h3 id="valid">Code Validation</h3>
