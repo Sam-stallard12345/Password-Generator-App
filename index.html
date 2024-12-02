@@ -179,7 +179,7 @@
 
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="nav"class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
            <h1> <a class="navbar-brand" href="#">PlayOrPass</a></h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -188,7 +188,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#nav">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="PasswordGen-Page/passwordgen.html">Password Generator</a>
@@ -240,8 +240,6 @@
         .card {
             margin-bottom: 30px;
         }
-    
-    <!--Cards for Links -->
    
         .card {
             height: 100%;
@@ -296,19 +294,25 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/7362e65c29.js" crossorigin="anonymous"></script>
-        <footer class="footer" style="background-color: #333; color: white; padding: 0px; text-align: center; position: fixed; width: 100%; bottom: 0; height: 60px;">
-             
-                <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.twitter.com" target="_blank" style="color: white; margin: 0 10px;">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com" target="_blank" style="color: white; margin: 0 10px;">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank" style="color: white; margin: 0 10px;">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+     
+        <!-- Footer -->
+        <footer class="footer" style="background-color: #333; color: white; padding: 0px; text-align: center; position: relative; width: 100%; bottom: 0; height: 60px;">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            
+            <a href="https://www.facebook.com" target="_blank" style="color: white; margin: 0 30px; font-size: 1.5em;">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" style="color: white; margin: 0 30px; font-size: 1.5em;">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" style="color: white; margin: 0 30px; font-size: 1.5em;">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" style="color: white; margin: 0 30px; font-size: 1.5em;">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            </div>
         </footer>
 
 </body>
