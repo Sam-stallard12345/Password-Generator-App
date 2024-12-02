@@ -67,6 +67,7 @@ function loadNewQuestion() {
 
 let isCorrect = null;
 
+
 // Add event listener to each answer
 answerDivArr.forEach((answers) => {
     answers.addEventListener('click', (e) => {
@@ -94,9 +95,9 @@ form.addEventListener('submit', handleFormSubmission);
 function handleFormSubmission(event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
-    const selectedAnswer = document.querySelector('.submit-button');
-    
-    if (selectedAnswer) {
+    const submission = document.querySelector('.submit-button');
+    if (submission) {
+
         // Check if the selected answer is correct
         if (isCorrect) {
             incrementScore();
@@ -104,20 +105,20 @@ function handleFormSubmission(event) {
             incrementWrongScore();
         } else { 
             alert('Please select an answer');
-            return;
         }
-
+        
         // Move to the next question
-        do {
+        if (isCorrect !== null) {
             currentQuestion++;
-        }
-        while (!isCorrect === null);
+        } 
+        
             
         if (currentQuestion < questions.length) {
             loadNewQuestion();
             for (let answers of answerDiv) {
                 answers.style.backgroundColor = 'white';
             }
+            isCorrect = null;
         } else {
             endQuiz();
         }
