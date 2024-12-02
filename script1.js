@@ -1,5 +1,4 @@
 // Questions and Answers
-
 const questions = [ 
     {
         question:   
@@ -61,8 +60,10 @@ function loadNewQuestion() {
         for (let answers of answerDiv) {
             answers.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answers)];
         }
-    }    
-}    
+    } else {    
+        endQuiz();
+    }  
+};    
 
 let isCorrect = null;
 
@@ -118,8 +119,8 @@ function handleFormSubmission(event) {
     } else {
         alert('Please select an answer');
     }
-}
 
+};
 
 // Set total questions
 let totalQuestions = document.querySelector('.total-questions');
@@ -145,11 +146,15 @@ function incrementWrongScore() {
 
 // End Quiz 
 function endQuiz() {
+
         goToEndPage();
         localStorage.setItem('score', score);
+
+    goToEndPage();
+    finalScore.textContent = `You answered ${score} out of ${questions.length}`;
+    refs/remotes/origin/main
 }
 
 function goToEndPage() {
     window.location.href = 'end.html'; 
 }
-
