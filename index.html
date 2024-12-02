@@ -24,7 +24,6 @@
         }
 
         .navbar {
-            background-color: #333;
             overflow: hidden;
             display: flex;
             justify-content: space-between;
@@ -65,7 +64,8 @@
         .dropdown {
             position: relative;
             display: inline-block;
-            z-index: 1000; /* Ensure dropdown is above other elements */
+            z-index: 1000;
+            /* Ensure dropdown is above other elements */
         }
 
         .dropdown .dropbtn {
@@ -85,7 +85,8 @@
             background-color: #f9f9f9;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1001; /* Ensure dropdown content is above other elements */
+            z-index: 1001;
+            /* Ensure dropdown content is above other elements */
             right: 0;
         }
 
@@ -136,7 +137,7 @@
                 height: auto;
             }
 
-            .navbar a { 
+            .navbar a {
                 padding: 10px;
             }
 
@@ -156,6 +157,16 @@
                 padding: 10px 20px;
                 font-size: 16px;
             }
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
@@ -188,7 +199,9 @@
     <section class="hero" style="background-color: #444; color: white; padding: 50px 20px;">
         <div class="container">
             <h2>Welcome to PlayOrPass</h2>
-            <p>Discover a suite of tools to help you generate, check, and test your passwords. Our goal is to provide you with the best resources to ensure your online security. Explore our apps and enhance your password management skills.</p>
+            <p>Discover a suite of tools to help you generate, check, and test your passwords. Our goal is to provide
+                you with the best resources to ensure your online security. Explore our apps and enhance your password
+                management skills.</p>
         </div>
     </section>
 
@@ -205,69 +218,44 @@
                         <a href="PasswordGen-Page/passwordgen.html" class="btn btn-dark">Password Generator</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="./images/password-check.png" class="card-img-top" alt="Password Checker">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <a href="PasswordChecker-Page/passwordcheck.html" class="btn btn-dark">Password Checker</a>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./images/password-check.png" class="card-img-top" alt="Password Checker">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <a href="PasswordChecker-Page/passwordcheck.html" class="btn btn-dark">Password Checker</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="./images/password-quiz.jpg" class="card-img-top" alt="Password Quiz">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <a href="quiz.html" class="btn btn-dark">Password Quiz</a>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="./images/password-quiz.jpg" class="card-img-top" alt="Password Quiz">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div>
-        <br>
-    </div>
+        <!-- links for Javascript-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7362e65c29.js" crossorigin="anonymous"></script>
+        <footer
+            style="background-color: #333; color: white; padding: 20px; text-align: center; position: fixed; width: 100%; bottom: 0;">
+            <footer class="footer">
+                <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" style="color: white; margin: 0 10px;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" style="color: white; margin: 0 10px;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" style="color: white; margin: 0 10px;">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- links for Javascript-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/7362e65c29.js" crossorigin="anonymous"></script>
 </body>
-
-<footer
-style="background-color: #333; color: white; padding: 20px; text-align: center; position: fixed; width: 100%; bottom: 0;">
-
-<a href="https://www.facebook.com" target="_blank" style="color: white; margin: 0 10px;">
-    <i class="fab fa-facebook-f"></i>
-</a>
-<a href="https://www.twitter.com" target="_blank" style="color: white; margin: 0 10px;">
-    <i class="fab fa-twitter"></i>
-</a>
-<a href="https://www.instagram.com" target="_blank" style="color: white; margin: 0 10px;">
-    <i class="fab fa-instagram"></i>
-</a>
-<a href="https://www.linkedin.com" target="_blank" style="color: white; margin: 0 10px;">
-    <i class="fab fa-linkedin-in"></i>
-</a>
-</footer>
-
-
 
 </html>
