@@ -124,6 +124,39 @@
         .buttons a:hover {
             background-color: #555;
         }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .navbar a { 
+                padding: 10px;
+            }
+
+            .dropdown-content {
+                right: auto;
+                left: 0;
+            }
+
+            .buttons a {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .buttons a {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 
@@ -143,9 +176,9 @@
             </button>
             <div class="dropdown-content">
                 <a href="#">Home</a>
-                <a href="../Password-Generator-App/PasswordGen-Page/index.html">Password Generator</a>
-                <a href="../Password-Generator-App/PasswordChecker-Page/index.html">Password Checker</a>
-                <a href="../Password-Generator-App/quiz.html">Password Quiz</a>
+                <a href="PasswordGen-Page/passwordgen.html">Password Generator</a>
+                <a href="PasswordChecker-Page/passwordcheck.html">Password Checker</a>
+                <a href="quiz.html">Password Quiz</a>
             </div>
         </div>
     </div>
@@ -169,7 +202,7 @@
                     <img src="./images/password-gen.png" class="card-img-top" alt="Password Generator">
                     <div class="card-body">
                         <h5 class="card-title"></h5>
-                        <a href="../Password-Generator-App/PasswordGen-Page/index.html" class="btn btn-dark">Password Generator</a>
+                        <a href="PasswordGen-Page/passwordgen.html" class="btn btn-dark">Password Generator</a>
                     </div>
                 </div>
             </div>
@@ -178,7 +211,7 @@
                     <img src="./images/password-check.png" class="card-img-top" alt="Password Checker">
                     <div class="card-body">
                         <h5 class="card-title"></h5>
-                        <a href="../Password-Generator-App/PasswordChecker-Page/index.html" class="btn btn-dark">Password Checker</a>
+                        <a href="PasswordChecker-Page/passwordcheck.html" class="btn btn-dark">Password Checker</a>
                     </div>
                 </div>
             </div>
@@ -187,7 +220,7 @@
                     <img src="./images/password-quiz.jpg" class="card-img-top" alt="Password Quiz">
                     <div class="card-body">
                         <h5 class="card-title"></h5>
-                        <a href="../Password-Generator-App/quiz.html" class="btn btn-dark">Password Quiz</a>
+                        <a href="quiz.html" class="btn btn-dark">Password Quiz</a>
                     </div>
                 </div>
             </div>
