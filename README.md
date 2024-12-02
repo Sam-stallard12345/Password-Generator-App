@@ -23,7 +23,7 @@ Password Generator app with a brief quiz
 <img src="PasswordGen-Page/assets /images/ProjectBoard.png" width="300px" height="300px">
 <h3 id="UX"> UX Design</h3>
 <h4>Wireframes</h4>
-<img src="PasswordGen-Page/assets /images/wireframes.png" width="300px" height="100px">
+<img src="PasswordGen-Page/assets /images/wireframes.png" width="300px" height="300px">
 <h3 id="features">Features</h3>
 
 <ol>
