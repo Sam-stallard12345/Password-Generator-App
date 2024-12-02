@@ -1,7 +1,7 @@
 let password = document.getElementById("password"); 
 let power = document.getElementById("powerbar");
 
-function checkPassword(){
+password.oninput = function (){
     let point = 0;
     let value = password.value;
     let widthPower = ["1%", "25%", "50%", "75%", "100%"];
