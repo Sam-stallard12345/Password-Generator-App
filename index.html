@@ -26,7 +26,6 @@
         }
 
         .navbar {
-            background-color: #333;
             overflow: hidden;
             display: flex;
             justify-content: space-between;
@@ -34,6 +33,7 @@
             padding: 0 20px;
             height: 60px;
             background-color: #333;
+            position: relative
         }
 
         .navbar .logo {
@@ -67,7 +67,8 @@
         .dropdown {
             position: relative;
             display: inline-block;
-            z-index: 1000; /* Ensure dropdown is above other elements */
+            z-index: 1000;
+            /* Ensure dropdown is above other elements */
         }
 
         .dropdown .dropbtn {
@@ -87,7 +88,8 @@
             background-color: #f9f9f9;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1001; /* Ensure dropdown content is above other elements */
+            z-index: 1001;
+            /* Ensure dropdown content is above other elements */
             right: 0;
         }
 
@@ -138,7 +140,7 @@
                 height: auto;
             }
 
-            .navbar a { 
+            .navbar a {
                 padding: 10px;
             }
 
@@ -159,6 +161,16 @@
                 font-size: 16px;
             }
         }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 
@@ -167,35 +179,83 @@
 
     <!-- Navbar -->
 
-
-    <div class="navbar">
-        <div class="logo">
-            <h1>PlayOrPass</h1>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">
-                <i class="fa fa-caret-down"></i>
+    <nav id="nav"class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+           <h1> <a class="navbar-brand" href="#">PlayOrPass</a></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="dropdown-content">
-                <a href="#">Home</a>
-                <a href="PasswordGen-Page/passwordgen.html">Password Generator</a>
-                <a href="PasswordChecker-Page/passwordcheck.html">Password Checker</a>
-                <a href="quiz.html">Password Quiz</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nav">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PasswordGen-Page/passwordgen.html">Password Generator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PasswordChecker-Page/passwordcheck.html">Password Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">Password Quiz</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
     <!-- Hero Section -->
 
     <section class="hero" style="background-color: #444; color: white; padding: 50px 20px;">
         <div class="container">
             <h2>Welcome to PlayOrPass</h2>
-            <p>Discover a suite of tools to help you generate, check, and test your passwords. Our goal is to provide you with the best resources to ensure your online security. Explore our apps and enhance your password management skills.</p>
+            <p>Discover a suite of tools to help you generate, check, and test your passwords. Our goal is to provide
+                you with the best resources to ensure your online security. Explore our apps and enhance your password
+                management skills.</p>
         </div>
     </section>
 
+    <style>
+        .card {
+            margin-bottom: 30px;
+        }
 
-    <!--Cards for Links -->
+        .card .btn {
+            background-color: #7e7575;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .card .btn:hover {
+            background-color: #555;
+        }
+    
+        .card {
+            margin-bottom: 30px;
+        }
+   
+        .card {
+            height: 100%;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
     <div style="height: 50px;"></div>
     <div class="container" style="width: 75%;">
         <div class="row">
@@ -203,8 +263,8 @@
                 <div class="card">
                     <img src="./images/password-gen.png" class="card-img-top" alt="Password Generator">
                     <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <a href="PasswordGen-Page/passwordgen.html" class="btn btn-dark">Password Generator</a>
+                        <h5 class="card-title">Password Generator</h5>
+                        <a href="PasswordGen-Page/passwordgen.html" class="btn btn-dark" style="width: auto; padding: 10px 20px;">Password Generator</a>
                     </div>
                 </div>
             </div>
@@ -212,8 +272,8 @@
                 <div class="card">
                     <img src="./images/password-check.png" class="card-img-top" alt="Password Checker">
                     <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <a href="PasswordChecker-Page/passwordcheck.html" class="btn btn-dark">Password Checker</a>
+                        <h5 class="card-title">Password Checker</h5>
+                        <a href="PasswordChecker-Page/passwordcheck.html" class="btn btn-dark" style="width: auto; padding: 10px 20px;">Password Checker</a>
                     </div>
                 </div>
             </div>
@@ -221,55 +281,40 @@
                 <div class="card">
                     <img src="./images/password-quiz.jpg" class="card-img-top" alt="Password Quiz">
                     <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <a href="quiz.html" class="btn btn-dark">Password Quiz</a>
+                        <h5 class="card-title">Password Quiz</h5>
+                        <a href="quiz.html" class="btn btn-dark" style="width: auto; padding: 10px 20px;">Password Quiz</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div>
-        <br>
-    </div>
+        <!-- links for Javascript-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7362e65c29.js" crossorigin="anonymous"></script>
+     
+        <!-- Footer -->
+        <footer class="footer" style="background-color: #333; color: white; padding: 0px; text-align: center; position: relative; width: 100%; bottom: 0; height: 60px;">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            
+            <a href="https://www.facebook.com" target="_blank" style="color: white; margin: 0 30px; font-size: 1.5em;">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" style="color: white; margin: 0 30px; font-size: 1.5em;">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" style="color: white; margin: 0 30px; font-size: 1.5em;">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" style="color: white; margin: 0 30px; font-size: 1.5em;">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
 
+            </div>
+        </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- links for Javascript-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/7362e65c29.js" crossorigin="anonymous"></script>
 </body>
-
-<footer
-style="background-color: #333; color: white; padding: 20px; text-align: center; position: fixed; width: 100%; bottom: 0;">
-
-<a href="https://www.facebook.com" target="_blank" style="color: white; margin: 0 10px;">
-    <i class="fab fa-facebook-f"></i>
-</a>
-<a href="https://www.twitter.com" target="_blank" style="color: white; margin: 0 10px;">
-    <i class="fab fa-twitter"></i>
-</a>
-<a href="https://www.instagram.com" target="_blank" style="color: white; margin: 0 10px;">
-    <i class="fab fa-instagram"></i>
-</a>
-<a href="https://www.linkedin.com" target="_blank" style="color: white; margin: 0 10px;">
-    <i class="fab fa-linkedin-in"></i>
-</a>
-</footer>
-
-
 
 </html>
