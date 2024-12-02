@@ -2,12 +2,6 @@
 <h1> Play or Pass </h1>
 Password Generator app with a brief quiz
 
-<<<<<<< HEAD
-Contents
-User Stories
-Features 
-Validation
-
 <h2> Contents </h2>
 <ol>
     <li><a href="#user">User Stories</a></li>
