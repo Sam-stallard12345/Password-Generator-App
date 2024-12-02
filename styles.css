@@ -38,7 +38,8 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    min-height: 10vh;
+    height: 7vh;
+    justify-content: center;
 }
 
 
