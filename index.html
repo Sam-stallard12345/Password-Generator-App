@@ -7,12 +7,17 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>PlayOrPass | Homepage</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Silkscreen:wght@400;700&display=swap');
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
             background-color: #333;
+        }
+        h1 {
+            font-family: 'Silkscreen', sans-serif;
         }
         .navbar {
             background-color: #333;
@@ -105,8 +110,7 @@
 <body>
     <div class="navbar">
         <div class="logo">
-            <img src="logo.png" alt="Logo">
-            <span>Password Generator</span>
+            <h1>PlayOrPass</h1>
         </div>
         <div class="dropdown">
             <button class="dropbtn">Apps 
@@ -120,11 +124,36 @@
             </div>
         </div> 
     </div>
-
-    <div class="buttons">
-        <a href="../Password-Generator-App/PasswordGen-Page/index.html">Password Generator</a>
-        <a href="../Password-Generator-App/PasswordChecker-Page/index.html">Password Checker</a>
-        <a href="../Password-Generator-App/quiz.html">Password Quiz</a>
+    <div class="container" style="width: 75%;">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="password_generator.jpg" class="card-img-top" alt="Password Generator">
+                    <div class="card-body">
+                        <h5 class="card-title">Password Generator</h5>
+                        <a href="../Password-Generator-App/PasswordGen-Page/index.html" class="btn btn-primary">Go to Password Generator</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="password_checker.jpg" class="card-img-top" alt="Password Checker">
+                    <div class="card-body">
+                        <h5 class="card-title">Password Checker</h5>
+                        <a href="../Password-Generator-App/PasswordChecker-Page/index.html" class="btn btn-primary">Go to Password Checker</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="password_quiz.jpg" class="card-img-top" alt="Password Quiz">
+                    <div class="card-body">
+                        <h5 class="card-title">Password Quiz</h5>
+                        <a href="../Password-Generator-App/quiz.html" class="btn btn-primary">Go to Password Quiz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -136,7 +165,21 @@
 
 
 
-
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center; position: fixed; width: 100%; bottom: 0;">
+       
+        <a href="https://www.facebook.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </footer>
 
 
 
