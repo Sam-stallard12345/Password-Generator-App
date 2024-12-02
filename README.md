@@ -26,17 +26,17 @@ Validation
 </ol>
 
 <h3 id="user">User Stories and project board</h3>
-<img src="PasswordGen-Page/assets /images/ProjectBoard.png">
+<img src="PasswordGen-Page/assets /images/ProjectBoard.png" width="300px" height="300px">
 <h3 id="UX"> UX Design</h3>
 <h4>Wireframes</h4>
-<img src="PasswordGen-Page/assets /images/wireframes.png" width="100px" height="100px">
+<img src="PasswordGen-Page/assets /images/wireframes.png" width="300px" height="100px">
 <h3 id="features">Features</h3>
 
 <ol>
     <li><h4 id="passgen">Password Generation</h4></li>
     <li><h4 id="passcheck">Password Quality Checker</h4></li>
     <li><h4 id="quizPage">Quiz Page</h4><br>
-    <img src="PasswordGen-Page/assets /images/quiz.png" width="100px" height="100px">
+    <img src="PasswordGen-Page/assets /images/quiz.png" width="300px" height="300px">
     </li>
     <li><h4 id="QnA">JS functionality</h4><br>
     Included 5 areas of functionality on the quiz page including: a dynamic question input, a dynamic and responsive answer input, a dom selector to retrieve the number of questions and a scoring system which inrements right and wrong answers.</li>
