@@ -104,6 +104,7 @@ function handleFormSubmission(event) {
             incrementWrongScore();
         } else { 
             alert('Please select an answer');
+            return;
         }
 
         // Move to the next question
