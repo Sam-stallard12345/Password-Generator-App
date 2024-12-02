@@ -1,5 +1,4 @@
 // Questions and Answers
-
 const questions = [ 
     {
         question:   
@@ -46,7 +45,7 @@ const answerDiv = document.querySelector('.answers').children;
 let answerDivArr = Array.from(answerDiv);
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadNewQuestion();    
+    loadNewQuestion();        
 });
 
 let currentQuestion = 0; 
@@ -58,7 +57,7 @@ function loadNewQuestion() {
         for (let answers of answerDiv) {
             answers.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answers)];
         }
-    } else { endQuiz(); }   
+    } else { endQuiz() }   
 }    
 
 let isCorrect = null;
@@ -102,11 +101,11 @@ submit.addEventListener('click', () => {
         loadNewQuestion();
     } else {
         alert('Please select an answer');
-        return;
-    }
+        
+    } 
+    
+
 });
-
-
 
 // Set total questions
 let totalQuestions = document.querySelector('.total-questions');
@@ -137,6 +136,7 @@ const finalScore = document.querySelector('.final-score')
 function endQuiz() {
     goToEndPage();
     finalScore.textContent = `You answered ${score} out of ${questions.length}`;
+    
 }
 
 function goToEndPage() {
