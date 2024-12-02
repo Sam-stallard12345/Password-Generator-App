@@ -154,6 +154,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: white;
     padding: 1em;
     color: #333;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
 
@@ -161,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     gap: 5vw;
-    width: 50%;
+    width: 100%;
     margin: auto;
 }
 /* Start Page */
