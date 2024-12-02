@@ -1,5 +1,4 @@
 // Questions and Answers
-<<<<<<< HEAD
 const questions = [ 
     {
         question:   
@@ -46,7 +45,10 @@ const answerDiv = document.querySelector('.answers').children;
 let answerDivArr = Array.from(answerDiv);
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadNewQuestion();        
+    if(currentQuestion === 0) {
+        loadNewQuestion();
+    }
+    
 });
 
 let currentQuestion = 0; 
@@ -58,8 +60,10 @@ function loadNewQuestion() {
         for (let answers of answerDiv) {
             answers.textContent = questions[currentQuestion].options[answerDivArr.indexOf(answers)];
         }
-    } else { endQuiz() }   
-}    
+    } else {    
+        endQuiz();
+    }  
+};    
 
 let isCorrect = null;
 
@@ -83,30 +87,40 @@ answerDivArr.forEach((answers) => {
     });
 });
 
-// Submit button
-const submit = document.querySelector('.submit-button');
-submit.addEventListener('click', () => {
-    if (isCorrect) {
-        incrementScore();
-        currentQuestion++;
-        for (let answers of answerDiv) {
-            answers.style.backgroundColor = 'white';
+// Attach the handleFormSubmission function to the form submit event
+const form = document.querySelector('#form');
+form.addEventListener('submit', handleFormSubmission);
+
+function handleFormSubmission(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Check if an answer is selected
+    const selectedAnswer = document.querySelector('.submit-button');
+    if (selectedAnswer) {
+        // Check if the selected answer is correct
+        if (isCorrect) {
+            incrementScore();
+        } else {
+            incrementWrongScore();
         }
-        loadNewQuestion();
-    } else if (isCorrect === false) {
-        incrementWrongScore();
+
+        // Move to the next question
         currentQuestion++;
-        for (let answers of answerDiv) {
-            answers.style.backgroundColor = 'white';
+        if (currentQuestion < questions.length) {
+            loadNewQuestion();
+            for (let answers of answerDiv) {
+                answers.style.backgroundColor = 'white';
+            }
+        } else {
+            endQuiz();
         }
-        loadNewQuestion();
+
+        
     } else {
         alert('Please select an answer');
-        
-    } 
-    
+    }
 
-});
+};
 
 // Set total questions
 let totalQuestions = document.querySelector('.total-questions');
@@ -130,51 +144,17 @@ function incrementWrongScore() {
     wrongScoreDiv.textContent = `Incorrect Answers: ${wrongScore}`;
 }
 
-// Get final score
-const finalScore = document.querySelector('.final-score')
-
 // End Quiz 
 function endQuiz() {
+
+        goToEndPage();
+        localStorage.setItem('score', score);
+
     goToEndPage();
     finalScore.textContent = `You answered ${score} out of ${questions.length}`;
-    
+    refs/remotes/origin/main
 }
 
 function goToEndPage() {
     window.location.href = 'end.html'; 
 }
-=======
-
-const questions = [ 
-    {
-    question:   
-    "What is the capital of Nigeria?", 
-    answer: {  },
-    options: ["Lagos", "Abuja", "Kano", "Ibadan"]
-    },
-    {]
-
-// Get DOM elements
-const questionDiv = document.querySelectorAll('.question');
-const answerDiv = document.querySelectorAll('.answer');
-
-// Display questions and answers
-
-// Add event listener to each answer
-
-// Check Answer on button submit
-const submitButton = document.querySelector('.submit');
-const result = document.querySelector('.result');
-
-submitButton.addEventListener('click', () => {
-    let score = 0;
-    answers.forEach((answer, index) => {
-        if (answer.checked) {
-            if (answer.value === 'correct') {
-                score++;
-            }
-        }
-    });
-    result.textContent = `Your score is ${score}`;
-});
->>>>>>> rayyan
