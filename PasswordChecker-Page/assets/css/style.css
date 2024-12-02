@@ -12,11 +12,11 @@ body {
     margin: 0;
     font-family: monospace;
     min-height: 100vh;
-    display: flex;
+    display:block ;      
     justify-content: center;
     background-image: linear-gradient(to top right,
             #333, #14191f);
-    color: #0e0f0f;
+    color: white;
     font-size: 20px;
 }
 
